@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background-color: #f0eae2; /* Pastel beige background */
+  color: #5c5c5c; /* Darker shade for text */
+}
+
+.container {
+  width: 80%;
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* Align elements in a column */
+  align-items: center; /* Center align items */
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+#header h2 {
+  font-size: 2rem;
+  color: #8a7f70; /* Pastel brown for header */
+  margin-bottom: 10px;
+}
+
+.user_input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.user_input input {
+  width: 50%;
+  max-width: 350px;
+  outline: none;
+  padding: 8px;
+  border: 1px solid #d0c9c0; /* Light pastel border */
+  border-radius: 15px; /* Rounded corners */
+  transition: all 0.30s ease-in-out;
+}
+
+.user_input input:focus {
+  box-shadow: 0 0 5px #a9b4c2; /* Soft shadow for focus */
+  border: 1px solid #a9b4c2;
+}
+
+.user_input button {
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 10px;
+  color: #5c5c5c; /* Darker text for contrast */
+  transition: 1s;
+  outline: none;
+  background-color: #eae0d5; /* Light pastel button background */
+  border: 1px solid #d0c9c0;
+  border-radius: 15px; /* Rounded corners */
+}
+
+.user_input button:hover {
+  background-color: #cfd3c7; /* Slightly darker on hover */
+  color: white;
+}
+
+#to_do_list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px; /* More rounded corners */
+  padding: 1rem;
+  color: #454545;
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: #ffffff; /* Keeping the item background white for clarity */
+  border: 1px solid #d0c9c0;
+  transition: all 0.30s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item:hover {
+  box-shadow: 0 0 20px #a9b4c2; /* Soft shadow on hover */
+  border: 1px solid #a9b4c2;
+}
+
+.item i {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .user_input input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .user_input input {
+    width: 100%;
+  }
+
+  .user_input button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
