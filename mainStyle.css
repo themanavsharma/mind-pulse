@@ -1,0 +1,169 @@
+h1 {
+    margin: 50px;
+    font-family: Nunito Sans;
+    color: #333; /* Set the text color */
+    text-align: center; /* Center the text horizontally */
+    font-size: 40px;
+}
+
+.flexbox-container{
+    display: flex;
+}
+
+.flexbox-item{
+    width: 400px;
+    height:400px;
+    margin: 10px;
+    /* border: 2px solid black; */
+    background-color: #e3e3e3;
+    border-radius: 70px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* external css: flickity.css */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    overflow: hidden; /* Hide any body overflow to prevent unwanted rectangles */
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Set full viewport height */
+    background: radial-gradient(circle, #ffffff, #e1e1e1);
+    background-size: 200% 200%; /* Set initial background size for animation */
+    animation: gradientAnimation 10s infinite linear; /* Adjust the duration as needed */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gallery {
+    /* background: #EEE; */
+    height: 550px; /* Set an initial height matching the height of the gallery cells */
+    overflow: hidden; /* Hide any overflow to prevent unwanted rectangles */
+}
+
+.gallery-cell {
+    width: 450px; /* Adjust the width to make it slightly narrower */
+    height: 450px; /* Set the height to make it larger */
+    margin-right: 40px;
+    background: #ddd; /* Light gray background color */
+    border-radius: 70px; /* Rounded corners */
+    counter-increment: gallery-cell;
+    position: relative; /* Add relative positioning */
+    will-change: transform;
+    
+    
+}
+
+/* cell number */
+.gallery-cell:before {
+    display: block;
+    position: absolute;
+    bottom: 40px; /* Adjust the distance from the bottom */
+    left: 40px; /* Adjust the distance from the left */
+    content: counter(gallery-cell);
+    font-size: 20px; 
+    color: white;
+}
+
+/* cell content */
+.gallery-cell:nth-child(1):before {
+    content: "begin \amindful reflection";
+    color: #9C9C9C;
+    font-family: Nunito Sans;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; 
+    white-space: pre-wrap;
+}
+
+/* cell content */
+.gallery-cell:nth-child(2):before {
+    content: "begin \aguided breathing";
+    color: #9C9C9C;
+    font-family: Nunito Sans;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; 
+    white-space: pre-wrap;
+}
+
+/* cell content */
+.gallery-cell:nth-child(5):before {
+    content: "share \ayour thoughts";
+    color: #9C9C9C;
+    font-family: Nunito Sans;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; 
+    white-space: pre-wrap;
+}
+
+
+.gallery-cell:nth-child(3):before {
+    content: "Text for Square 3";
+}
+
+.gallery-cell:nth-child(4):before {
+    content: "Text for Square 4";
+}
+
+.flickity-prev-next-button {
+    top: auto;
+    bottom: 10px; 
+}
+
+.flickity-prev-next-button.previous {
+    transform: translateX(670px); 
+}
+
+.flickity-prev-next-button.next {
+    transform: translateX(-670px); 
+}
+
+.flickity-prev-next-button {
+    background-color: #ddd; 
+}
+
+
+
+.flickity-prev-next-button {
+    color: #9C9C9C; 
+}
+
+
+.gallery-cell:hover {
+    background-color:  #cecece;  
+}
+
+.admin-login {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    text-align: right;
+}
+
+.admin-login a {
+    color: #333; 
+    text-decoration: none;
+}
+
+
+
