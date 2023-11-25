@@ -1,18 +1,103 @@
-*{
+
+body {
     margin: 0;
     padding: 0;
-    font-family:'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-.container{
-    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    background:#333;
-
-}
-.music-player{
-    background: #ffe0e5;
-    width: 400px;
-    padding: 25px 35px;
+    background-color: #b2aba3; /* Sage green-like background */
+ }
+ 
+ 
+ .music-container {
+    background-color: #d4d7c7; /* Light sage green */
+    color: #505a5b; /* Complementary color for text */
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ 
+ .music-header,
+ .music-controls,
+ .volume-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+ }
+ 
+ 
+ .music-header {
+    margin-bottom: 20px;
+ }
+ 
+ 
+ .now-playing {
+    font-size: 1.2rem;
+ }
+ 
+ 
+ .album-art-container {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ 
+ .album-art {
+    width: 100%;
+    border-radius: 5px;
+ }
+ 
+ 
+ .song-info {
     text-align: center;
-}
+ }
+ 
+ 
+ .song-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+ }
+ 
+ 
+ .artist-name {
+    font-size: 0.9rem;
+ }
+ 
+ 
+ .icon-button {
+    background: none;
+    border: none;
+    color: #505a5b;
+    font-size: 1.5rem;
+    cursor: pointer;
+ }
+ 
+ 
+ .icon-button:hover {
+    color: #697268; /* Darker sage green for hover state */
+ }
+ 
+ 
+ .music-controls .icon-button {
+    margin: 0 15px;
+ }
+ 
+ 
+ .volume-container .icon-button {
+    font-size: 1.2rem;
+ }
+ 
+ 
+ .volume-slider {
+    width: 60%;
+ }
+ 
+ 
+ /* Additional styles for responsiveness and interactivity */
+ 
