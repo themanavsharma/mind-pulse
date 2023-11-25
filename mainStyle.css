@@ -92,6 +92,30 @@ h1 {
 }
 
 /* cell content */
+.gallery-cell:nth-child(3):before {
+    content: "lorem \aipsum dolor";
+    color: #9C9C9C;
+    font-family: Nunito Sans;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; 
+    white-space: pre-wrap;
+}
+
+/* cell content */
+.gallery-cell:nth-child(4):before {
+    content: "lorem \aipsum dolor";
+    color: #9C9C9C;
+    font-family: Nunito Sans;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; 
+    white-space: pre-wrap;
+}
+
+/* cell content */
 .gallery-cell:nth-child(2):before {
     content: "begin \aguided breathing";
     color: #9C9C9C;
@@ -115,14 +139,6 @@ h1 {
     white-space: pre-wrap;
 }
 
-
-.gallery-cell:nth-child(3):before {
-    content: "Text for Square 3";
-}
-
-.gallery-cell:nth-child(4):before {
-    content: "Text for Square 4";
-}
 
 .flickity-prev-next-button {
     top: auto;
