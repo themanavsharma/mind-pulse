@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="moodTracker.css">
+    <title>Mood Tracker</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mood Tracker</h1>
+        <div class="form-container">
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+            <label for="mood">Mood:</label>
+            <div class="mood-buttons">
+                <span onclick="logMood('😄')">😄</span>
+                <span onclick="logMood('😢')">😢</span>
+                <span onclick="logMood('😐')">😐</span>
+                <span onclick="logMood('😃')">😃</span>
+                <span onclick="logMood('😡')">😡</span>
+            </div>
+            <!-- Clear Logs button -->
+            <button onclick="clearLogs()">Clear Logs</button>
+        </div>
+        <div class="mood-log" id="moodLog">
+            <!-- Mood logs will be displayed here -->
+        </div>
+    </div>
+    <script src="moodTracker.js"></script>
+</body>
+
+</html>
