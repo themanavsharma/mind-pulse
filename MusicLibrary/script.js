@@ -8,10 +8,15 @@ const volumeUpButton = document.getElementById('volume-up');
 
 
 const songs = [
-   'Songs/60-minutes-of-ultra-soft-noise-v2-25123.mp3',
-   'Songs/gentle-ocean-waves-birdsong-and-gull-7109.mp3',
-   'Songs/heavy-rain-white-noise-159772.mp3',
-   // Add the rest of your songs here
+   'Music/60-minutes-of-ultra-soft-noise-v2-25123.mp3',
+   'Music/gentle-ocean-waves-birdsong-and-gull-7109.mp3',
+   'Music/heavy-rain-white-noise-159772.mp3',
+   'Music/gentle-ocean-waves-birdsong-and-gull-7109.mp3',
+   'Music/my-love-medium-177577.mp3',
+   'Music/rain-inside-a-car-113602.mp3',
+   'Music/relaxing-ocean-waves-high-quality-recorded-177004.mp3',
+   'Music/soft-piano-logo-141290.mp3',
+   'Music/wind__artic__cold-6195.mp3'
 ];
 let currentSongIndex = 0;
 
