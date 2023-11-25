@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxing Music</title>
+</head>
+
+<body>
+    <button onclick="playMusic()">Play Relaxing Music</button>
+
+    <script>
+        function playMusic() {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+            // Create an oscillator
+            const oscillator = audioContext.createOscillator();
+            oscillator.type = 'sine'; // Sine wave for a smooth sound
+            oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // Starting frequency
+
+            // Create a gain node to control the volume
+            const gainNode = audioContext.createGain();
+            gainNode.gain.setValueAtTime(0.5, audioContext.currentTime); // Starting volume
+
+            // Connect the nodes
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            // Start the oscillator
+            oscillator.start();
+
+            // Fade out after 5 seconds
+            gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 300);
+
+            // Stop the oscillator after 5 seconds
+            oscillator.stop(audioContext.currentTime + 100);
+        }
+    </script>
+</body>
+
+</html>
