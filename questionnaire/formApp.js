@@ -8,10 +8,7 @@ const CommentName = document.getElementById("CommentName");
 const CommentEmail = document.getElementById("CommentEmail");
 const Comment = document.getElementById("Comment");
 const CommentStatus = document.getElementById("CommentStatus");
-const peopleCount1 = document.getElementById("peopleCount1");
-const peopleCount2 = document.getElementById("peopleCount2");
-const peopleCount3 = document.getElementById("peopleCount3");
-const peopleCount4 = document.getElementById("peopleCount4");
+
 
 var questions=[];
 var Qno = 0;
