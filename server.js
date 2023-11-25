@@ -22,7 +22,7 @@ app.use(express.static("jsons"));
 // app.use(express.static("pdfs"));
 
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname+"/form.html");
+    res.sendFile(__dirname+"/main.html");
 });
 
 app.get('/getQuestions',(req,res)=>{
