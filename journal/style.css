@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 800px; /* Adjust the width as needed */
+    /* Remove fixed height to allow dynamic sizing */
+}
+
+input[type="text"] {
+    width: calc(100% - 7px); /* Adjusted width for entry name */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: calc(100% - 20px); /* Adjusted width for journal entry textarea */
+    height: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px; /* Add space between buttons */
+    background-color: #6236ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4925e3;
+}
+
+.journal-entries {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Add some space between the timestamp and the delete button */
+.journal-entry {
+    margin-bottom: 10px;
+}
+
+.journal-entry span {
+    margin-right: 10px;
+}
+
+.journal-entry button {
+    background-color: #ff6347; /* Change the button color to a red shade */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.journal-entry button:hover {
+    background-color: #cc4c38; /* Darker shade on hover */
+}

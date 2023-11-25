@@ -31,7 +31,7 @@ button {
     padding: 15px; /* Increase the padding for inputs and buttons */
     margin: 10px; /* Increase the margin for inputs and buttons */
     border: none;
-    border-radius: 10px; /* Increase the border radius for rounded corners */
+    border-radius: 20px; /* Increase the border radius for rounded corners */
     outline: none;
 }
 
