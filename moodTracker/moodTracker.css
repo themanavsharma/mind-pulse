@@ -69,6 +69,7 @@ button:hover {
 }
 .mood-buttons span {
     cursor: pointer;
+    font-size: 40px;
 }
 
 .mood-buttons span:hover {
