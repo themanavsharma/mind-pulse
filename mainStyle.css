@@ -152,6 +152,18 @@ h1 {
     white-space: pre-wrap;
 }
 
+/* cell content */
+.gallery-cell:nth-child(7):before {
+    content: "listen \ato calming music";
+    color: #9C9C9C;
+    font-family: Nunito Sans;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; 
+    white-space: pre-wrap;
+}
+
 
 .flickity-prev-next-button {
     top: auto;
