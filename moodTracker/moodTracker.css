@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 120px; /* Increase the padding to make the box bigger */
+    border-radius: 20px; /* Increase the border radius for rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px; /* Increase the margin to add space around the box */
+}
+
+.form-container {
+    margin-bottom: 30px; /* Increase the margin at the bottom */
+}
+
+label {
+    margin-right: 10px; /* Increase the margin between label and input */
+}
+
+input,
+select,
+button {
+    padding: 15px; /* Increase the padding for inputs and buttons */
+    margin: 10px; /* Increase the margin for inputs and buttons */
+    border: none;
+    border-radius: 10px; /* Increase the border radius for rounded corners */
+    outline: none;
+}
+
+input, select {
+    width: calc(100% - 30px); /* Adjusted width */
+}
+
+button {
+    background-color: #6236ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4925e3;
+}
+
+.mood-log {
+    text-align: left;
+}
+
+.mood-entry {
+    background-color: #ffffff;
+    border-radius: 10px; /* Increase the border radius for rounded corners */
+    padding: 15px; /* Increase the padding */
+    margin: 10px 0; /* Increase the margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mood-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Increase the margin at the top */
+}
+.mood-buttons span {
+    cursor: pointer;
+}
+
+.mood-buttons span:hover {
+    background-color: #ddd; /* Optional: Add a background color on hover */
+}
+
+.mood-buttons button {
+    flex: 1;
+    padding: 15px; /* Increase the padding for buttons */
+    margin: 0 10px; /* Increase the margin for buttons */
+    border: none;
+    border-radius: 10px; /* Increase the border radius for rounded corners */
+    cursor: pointer;
+    background-color: #6236ff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.mood-buttons button:hover {
+    background-color: #4925e3;
+}
