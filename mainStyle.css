@@ -93,7 +93,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(3):before {
-    content: "lorem \aipsum dolor";
+    content: "track \ayour mood";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
