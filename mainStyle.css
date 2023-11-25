@@ -106,7 +106,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(4):before {
-    content: "lorem \aipsum dolor";
+    content: "view \aserenity quotes";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -131,6 +131,18 @@ h1 {
 /* cell content */
 .gallery-cell:nth-child(5):before {
     content: "share \ayour thoughts";
+    color: #9C9C9C;
+    font-family: Nunito Sans;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; 
+    white-space: pre-wrap;
+}
+
+/* cell content */
+.gallery-cell:nth-child(6):before {
+    content: "create \aself-care list";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
