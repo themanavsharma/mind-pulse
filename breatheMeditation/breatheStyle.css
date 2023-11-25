@@ -18,14 +18,11 @@ body {
 
 .input {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
+  align-items: center;
 }
 
 .input label {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 8px;
+  margin-right: 10px;
 }
 
 .input select {
@@ -36,6 +33,12 @@ body {
   padding: 8px 4px;
   background-color: #6236ff;
   color: #fff;
+}
+
+.breath-button {
+  padding: 8px 16px; /* Add padding for better appearance */
+  margin-right: 5px; /* Add some spacing between buttons */
+  margin-bottom: 10px;
 }
 
 .input select:focus {
@@ -127,7 +130,7 @@ body {
 
 button {
   padding: 8px 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   background-color: #6236ff;
   color: #fff;
   border: none;
