@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="breatheStyle.css" />
-    <title>Meditation App</title>
+    <title>Meditation Part</title>
   </head>
   <body>
     <div class="input">
@@ -17,12 +17,17 @@
       </select>
     </div>
     <div class="circle-wrap">
-      <div class="circle-outline"></div>
+      <div class="circle-outline">
+        <div class="inner-circle">
+          <p class="circle-text">Breathe</p>
+        </div>
+        <div class="spinner"></div>
+      </div>
       <div class="circle-progress"></div>
     </div>
     <p class="breaths">Breaths remaining: <span class="breaths-text">3</span></p>
     <p class="instructions">Are you ready to start breathing?</p>
     <button class="start">Begin</button>
-    <script src="breatheStyle.js"></script>
+    <script src="breatheApp.js"></script>
   </body>
 </html>
