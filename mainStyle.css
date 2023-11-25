@@ -64,6 +64,7 @@ h1 {
     counter-increment: gallery-cell;
     position: relative; /* Add relative positioning */
     will-change: transform;
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); */
     
     
 }
