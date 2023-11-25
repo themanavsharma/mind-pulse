@@ -1,3 +1,5 @@
+
+
 h1 {
     margin: 50px;
     font-family: Nunito Sans;
@@ -171,11 +173,11 @@ h1 {
 }
 
 .flickity-prev-next-button.previous {
-    transform: translateX(670px); 
+    transform: translateX(660px); 
 }
 
 .flickity-prev-next-button.next {
-    transform: translateX(-670px); 
+    transform: translateX(-660px); 
 }
 
 .flickity-prev-next-button {
