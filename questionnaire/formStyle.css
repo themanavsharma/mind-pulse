@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
-  background-color: rgb(19, 13, 78), 0, 128;
 }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  background-color: #f0f0f0;
+  background-color: rgb(3, 2, 39);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
+  
 }
 
 header {
@@ -18,7 +18,7 @@ header {
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: rgb(209, 208, 233);
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
