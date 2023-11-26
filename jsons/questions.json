@@ -1,32 +1,32 @@
 {
     "question":[
         {
-            "Q":"emotional state",
-            "options":["calm and content","neutral","stressed or anxious"],
+            "Q":"Emotional State",
+            "options":["Calm and content","Neutral","Stressed or anxious"],
             "values":["1","3","2"],
             "name":"age"
         },
         {
-            "Q":"work-life balance",
-            "options":["well-balanced","satisfactory","overwhelmed"],
+            "Q":"Work-life Balance",
+            "options":["Well-balanced","Satisfactory","Overwhelmed"],
             "values":["1","3","2"],
             "name":"family"
         },
         {
-            "Q":"physical well-being",
-            "options":["energized and healthy","average","fatigued or unwell"],
+            "Q":"Physical Well-being",
+            "options":["Energized and healthy","Average","Fatigued or unwell"],
             "values":["1","3","2"],
             "name":"taking_help"
         },
         {
-            "Q":"connection to others",
-            "options":["strong and supportive","adequate","feeling isolated"],
+            "Q":"Connection To Others",
+            "options":["Strong and supportive","Adequate","Feeling isolated"],
             "values":["1","3","2"],
             "name":"online_help"
         },
         {
-            "Q":"mindfullness practices",
-            "options":["regularly engage in mindfulness activities","occasionally practice mindfulness","rarely practice mindfulness"],
+            "Q":"Mindfullness Practices",
+            "options":["Regularly engage in mindfulness activities","Occasionally practice mindfulness","Rarely practice mindfulness"],
             "values":["1","3","2"],
             "name":"experienced_attack"
         }
