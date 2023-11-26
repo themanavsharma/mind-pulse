@@ -23,7 +23,7 @@ let currentSongIndex = 0;
 
 function loadSong(songIndex) {
    audioPlayer.src = songs[songIndex];
-   audioPlayer.play();
+   // audioPlayer.play();
 }
 
 
