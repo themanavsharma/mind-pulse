@@ -17,6 +17,12 @@
       "password": "Iambella",
       "name": "Bella",
       "premiumStatus": 0
+    },
+    {
+      "email": "singhjapneet250@gmail.com",
+      "password": "12345",
+      "name": "japneet",
+      "premiumStatus": 0
     }
   ]
 }
