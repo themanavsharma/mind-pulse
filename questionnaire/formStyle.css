@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
-  background-color: rgb(19, 13, 78), 0, 128;
 }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  background-color: #f0f0f0;
+  background: linear-gradient(-45deg, #536e7e, #859dab, #c3d0d4, #4a90b5);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
+  animation: gradientAnimation 5s ease infinite;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: #d4d7c7; /* Light sage green */
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -82,7 +82,7 @@ label {
 }
 
 .options input:checked ~ .checkmark {
-  background: #21bf73;
+  background: #859dab;
 }
 
 .options input:checked ~ .checkmark:after {
@@ -117,7 +117,7 @@ button {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 10px;
-  background-color: #21bf73;
+  background-color: #859dab;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -126,7 +126,7 @@ button {
 }
 
 button:hover {
-  background-color: #156534;
+  background-color: #536e7e;
 }
 
 #status {
