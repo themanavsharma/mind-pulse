@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "abc123",
+      "name": "Bob",
+      "premiumStatus": 0
+    },
+    {
+      "email": "anotheradmin@gmail.com",
+      "password": "123abc",
+      "name": "Tiffany",
+      "premiumStatus": 0
+    },
+    {
+      "email": "bella@gmail.com",
+      "password": "Iambella",
+      "name": "Bella",
+      "premiumStatus": 0
+    }
+  ]
+}

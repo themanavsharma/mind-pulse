@@ -129,6 +129,85 @@ app.get('/getCount',(req,res)=>{
     res.json({"response":response});
 });
 
+
+app.use(express.json()); // Add this line to enable JSON parsing
+
+// //code to add sign up to user.json 
+// app.post('/signup', (req, res) => {
+//     const { email, password, name } = req.body;
+  
+//     if (email && password && name) {
+//       const userData = {
+//         email: email,
+//         password: password,
+//         name: name,
+//         premiumStatus: 0, // Set premiumStatus to 0 by default
+//       };
+  
+//       const usersData = JSON.parse(fs.readFileSync('jsons/users.json', 'utf-8'));
+//       usersData.users.push(userData);
+  
+//       fs.writeFileSync('jsons/users.json', JSON.stringify(usersData, null, 2), 'utf-8');
+  
+//       res.status(200).json({ message: 'Sign up successful!' });
+//     } else {
+//       res.status(400).json({ message: 'Please enter valid email, password, and name.' });
+//     }
+//   });
+
+//adds user account to users.json
+app.post('/signup', (req, res) => {
+    try {
+      const usersData = JSON.parse(fs.readFileSync('jsons/users.json', 'utf-8') || '{"users": []}');
+      
+      const { email, password, name } = req.body;
+  
+      if (email && password && name) {
+        const userData = {
+          email: email,
+          password: password,
+          name: name,
+          premiumStatus: 0, // Set premiumStatus to 0 by default
+        };
+  
+        usersData.users.push(userData);
+  
+        fs.writeFileSync('jsons/users.json', JSON.stringify(usersData, null, 2), 'utf-8');
+  
+        res.status(200).json({ message: 'Sign up successful!' });
+      } else {
+        res.status(400).json({ message: 'Please enter valid email, password, and name.' });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
+
+  app.post('/signin', (req, res) => {
+    try {
+      const usersData = JSON.parse(fs.readFileSync('jsons/users.json', 'utf-8') || '{"users": []}');
+      
+      const { email, password } = req.body;
+  
+      if (email && password) {
+        const user = usersData.users.find(user => user.email === email && user.password === password);
+  
+        if (user) {
+          res.status(200).json({ message: 'Login successful!' });
+        } else {
+          res.status(401).json({ message: 'Login failed. Please check your email and password.' });
+        }
+      } else {
+        res.status(400).json({ message: 'Please enter both email and password.' });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
+
+
 app.listen(PORT,()=>{
     console.log("http://localhost:"+PORT);
 });
