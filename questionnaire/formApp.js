@@ -77,19 +77,19 @@ function next(){
         for(i=0;i<marks.length;i++){
             totalMarks+=marks[i];
         }
-        prevBut.style.display = "none";
-        nextBut.style.display = "none";
-        var url = '/getResult?result=' + totalMarks;
-        fetch(url).then(res => res.json()).
-            then(data => {
-                QSection.style.textAlign = "center";
-                QSection.style.color = data.color;
-                QSection.style.fontSize = "20px";
-                var showData = "Mental Health Percentage : " + (100 - ((totalMarks / 24 * 100).toFixed(2)));
-                showData += "<br/><br/><br/>"
-                showData+="Click <a href='/"+data.color+"' target='_blank'>link</a> to see";
-                QSection.innerHTML = showData;
-            });
+        prevBut.style.display="none";
+        nextBut.style.display="none";
+        var url = '/getResult?result='+totalMarks+"&email="+email_address.value;
+        fetch(url).then(res=>res.json()).
+        then(data=>{
+            QSection.style.textAlign="center";
+            QSection.style.color=data.color;
+            QSection.style.fontSize="20px";
+            var showData = "Mental Health Percentage : "+(100-((totalMarks/24*100).toFixed(2)));
+            showData+="<br/><br/><br/>"
+            showData+="Click <a href='/"+data.color+"' target='_blank'>link</a> to see";
+            QSection.innerHTML=showData;
+        });
     }
 }
 

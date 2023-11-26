@@ -66,7 +66,7 @@ function sendMail(email){
     let info = transporter.sendMail({
         from: 'javascriptextreme@gmail.com', // sender address
         to: email, // list of receivers
-        subject: "Your Mental Health Plan", // Subject line
+        subject: "Your Yoga and Food Plan", // Subject line
         text: "Check attached pdf.\n\n\nThank You\nJavaScriptX",
         attachments: [
           {

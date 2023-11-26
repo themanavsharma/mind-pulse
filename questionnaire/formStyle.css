@@ -49,9 +49,6 @@ label {
 .options {
   position: relative;
   padding-left: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .options label {
@@ -67,10 +64,9 @@ label {
   opacity: 0;
 }
 
-
 .checkmark {
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   height: 25px;
   width: 25px;
@@ -104,7 +100,7 @@ label {
 input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Added space here */
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
@@ -113,7 +109,7 @@ input {
 button {
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 10px;
+  margin-top: 10px; /* Added space here */
   background-color: #21bf73;
   color: #fff;
   border: none;
