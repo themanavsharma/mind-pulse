@@ -138,62 +138,62 @@ function next() {
     }
 }
 
-function readEmail(){
-    // No need to check for email validity, just proceed to show the questions
-    showQuestion();
-}
+// function readEmail(){
+//     // No need to check for email validity, just proceed to show the questions
+//     showQuestion();
+// }
 
-function sendComment(){
-    var url="/setComment?CommentName="+CommentName.value+"&CommentEmail="+CommentEmail.value+"&Comment="+Comment.value;
-    CommentName.value="";
-    CommentEmail.value="";
-    Comment.value="";
-    fetch(url).then(res=>res.json()).
-    then(data=>{
-        if(data.success){
-            CommentStatus.innerHTML="Response Recorded";
-        }else{
-            CommentStatus.innerHTML="Error Occured";
-        }
-    })
-}
+// function sendComment(){
+//     var url="/setComment?CommentName="+CommentName.value+"&CommentEmail="+CommentEmail.value+"&Comment="+Comment.value;
+//     CommentName.value="";
+//     CommentEmail.value="";
+//     Comment.value="";
+//     fetch(url).then(res=>res.json()).
+//     then(data=>{
+//         if(data.success){
+//             CommentStatus.innerHTML="Response Recorded";
+//         }else{
+//             CommentStatus.innerHTML="Error Occured";
+//         }
+//     })
+// }
 
-var CountOne=20,CountTwo=5,CountThree=12,CountFour=3;
+// var CountOne=20,CountTwo=5,CountThree=12,CountFour=3;
 
-function countAllNumbers(){
-    fetch('/getCount').then(res=>res.json()).
-    then(data=>{
-        CountOne = data.response.one;
-        CountTwo = data.response.two;
-        CountThree = data.response.three;
-        CountFour = data.response.four;
-    });
-}
+// function countAllNumbers(){
+//     fetch('/getCount').then(res=>res.json()).
+//     then(data=>{
+//         CountOne = data.response.one;
+//         CountTwo = data.response.two;
+//         CountThree = data.response.three;
+//         CountFour = data.response.four;
+//     });
+// }
 
-var mouseoverCount=0;
-var intervalCount=0;
-function showAllCount(){
-    var count1=0,count2=0,count3=0,count4=0;
-    if((mouseoverCount++)==1){
-        var x = setInterval(()=>{
-            if((count1++)<CountOne){
-                peopleCount1.innerHTML=count1;
-            }
-            if((count2++)<CountTwo){
-                peopleCount2.innerHTML=count1;
-            }
-            if((count3++)<CountThree){
-                peopleCount3.innerHTML=count1;
-            }
-            if((count4++)<CountFour){
-                peopleCount4.innerHTML=count1;
-            }
-            if((intervalCount++)>=CountOne){
-                clearInterval(x);
-            }
-        },200);
-    }
-}
+// var mouseoverCount=0;
+// var intervalCount=0;
+// function showAllCount(){
+//     var count1=0,count2=0,count3=0,count4=0;
+//     if((mouseoverCount++)==1){
+//         var x = setInterval(()=>{
+//             if((count1++)<CountOne){
+//                 peopleCount1.innerHTML=count1;
+//             }
+//             if((count2++)<CountTwo){
+//                 peopleCount2.innerHTML=count1;
+//             }
+//             if((count3++)<CountThree){
+//                 peopleCount3.innerHTML=count1;
+//             }
+//             if((count4++)<CountFour){
+//                 peopleCount4.innerHTML=count1;
+//             }
+//             if((intervalCount++)>=CountOne){
+//                 clearInterval(x);
+//             }
+//         },200);
+//     }
+// }
 
 // Assuming marks array is already populated
 

@@ -7,16 +7,16 @@ var PDF="WHITE.PDF";
 
 const bodyParser = require('body-parser');
 
-var nodemailer = require('nodemailer');
+// var nodemailer = require('nodemailer');
 const { dirname } = require('path');
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'javascriptextreme@gmail.com',
-    pass: 'extreme@javaScript'
-  }
-});
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'javascriptextreme@gmail.com',
+//     pass: 'extreme@javaScript'
+//   }
+// });
 
 
 app.use(express.static("."));
@@ -61,23 +61,23 @@ app.get('/getResult',(req,res)=>{
         PDF="GreenPlan.pdf";
         res.json({"color":"Green"});
     }
-    sendMail(email);
+    // sendMail(email);
 });
 
-function sendMail(email){
-    let info = transporter.sendMail({
-        from: 'javascriptextreme@gmail.com', // sender address
-        to: email, // list of receivers
-        subject: "Your Yoga and Food Plan", // Subject line
-        text: "Check attached pdf.\n\n\nThank You\nJavaScriptX",
-        attachments: [
-          {
-            filename: PDF,
-            path: path.join(__dirname + "/pdfs/"+PDF)
-          },
-        ],
-      });
-}
+// function sendMail(email){
+//     let info = transporter.sendMail({
+//         from: 'javascriptextreme@gmail.com', // sender address
+//         to: email, // list of receivers
+//         subject: "Your Yoga and Food Plan", // Subject line
+//         text: "Check attached pdf.\n\n\nThank You\nJavaScriptX",
+//         attachments: [
+//           {
+//             filename: PDF,
+//             path: path.join(__dirname + "/pdfs/"+PDF)
+//           },
+//         ],
+//       });
+// }
 
 app.get('/Red',(req,res)=>{
     res.sendFile(path.join(__dirname+"/pdfs/RedPlan.pdf"));
