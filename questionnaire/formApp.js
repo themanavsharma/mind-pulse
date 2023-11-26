@@ -22,7 +22,7 @@ function init(){
     then(data=>{
         for(i=0;i<data.question.length;i++){
             QuestionData[i]=data.question[i].name;
-            var newQ = '<div class="question ml-sm-5 pl-sm-5 pt-2"><div class="py-2 h5"><b>'+data.question[i].Q+'</b></div><div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">';
+            var newQ = '<div class="question-ml-sm-5-pl-sm-5-pt-2"><div class="py-2 h5"><b>'+data.question[i].Q+'</b></div><div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">';
             for(j=0;j<data.question[i].options.length;j++){
                 newQ += ' <label class="options">'+data.question[i].options[j]+' <input type="radio" value="'+data.question[i].values[j]+'" name="'+data.question[i].name+'"> <span class="checkmark"></span> </label>';
             }
