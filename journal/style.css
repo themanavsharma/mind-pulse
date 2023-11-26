@@ -6,10 +6,11 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    background-color: #0a0324;
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: rgb(188, 181, 202);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
