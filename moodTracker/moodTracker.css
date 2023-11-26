@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: rgb(22, 4, 50);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: rgb(171, 152, 202);
     padding: 120px; /* Increase the padding to make the box bigger */
     border-radius: 20px; /* Increase the border radius for rounded corners */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
