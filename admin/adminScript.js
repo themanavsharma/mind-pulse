@@ -203,11 +203,11 @@ async function displayJournalEntries() {
         labels: labels.map(label => {
           switch (label) {
             case '1':
-              return 'Energized';
+              return 'Strong';
             case '2':
-              return 'Average';
+              return 'Adequate';
             case '3':
-              return 'Fatigued';
+              return 'Feeling isolated';
             default:
               return label;
           }
@@ -251,11 +251,11 @@ async function displayJournalEntries() {
         labels: labels.map(label => {
           switch (label) {
             case '1':
-              return 'Energized';
+              return 'Regularly';
             case '2':
-              return 'Average';
+              return 'Occasionally';
             case '3':
-              return 'Fatigued';
+              return 'Rarely';
             default:
               return label;
           }
