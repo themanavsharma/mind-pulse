@@ -6,11 +6,12 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #0a0324;
+    background: linear-gradient(-45deg, #536e7e, #859dab, #c3d0d4, #4a90b5);
+    animation: gradientAnimation 5s ease infinite;
 }
 
 .container {
-    background-color: rgb(188, 181, 202);
+    background-color: #d4d7c7;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -41,7 +42,7 @@ textarea {
 button {
     padding: 10px 20px;
     margin-right: 10px; /* Add space between buttons */
-    background-color: #6236ff;
+    background-color: #859dab;
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -50,7 +51,7 @@ button {
 }
 
 button:hover {
-    background-color: #4925e3;
+    background-color: #536e7e;
 }
 
 .journal-entries {
