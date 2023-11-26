@@ -4,21 +4,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: rgb(22, 4, 50);
 }
 
-body {
-  font-family: 'Fredoka One', cursive;
-  background-color: #f0eae2; /* Pastel beige background */
-  color: #5c5c5c; /* Darker shade for text */
-}
-
-.container {
-  width: 80%;
   max-width: 1280px;
   margin: auto;
   display: flex;
   flex-direction: column; /* Align elements in a column */
   align-items: center; /* Center align items */
+  background-color: rgb(22, 4, 50);
 }
 
 #header {
