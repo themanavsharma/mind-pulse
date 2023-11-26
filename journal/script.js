@@ -81,3 +81,40 @@ document.addEventListener('DOMContentLoaded', function () {
         journalEntriesContainer.appendChild(entryDiv);
     }
 });
+
+const addJournalEntryBtn = document.getElementById('addJournalEntry');
+const journalEntryTextarea = document.getElementById('journalEntry');
+const messageDiv = document.getElementById('message');
+
+addJournalEntryBtn.addEventListener('click', async () => {
+  const comment = journalEntryTextarea.value.trim();
+
+  if (comment !== '') {
+    try {
+      const response = await fetch('/addThought', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          comment: comment,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Clear the textarea and display success message
+        journalEntryTextarea.value = '';
+        messageDiv.textContent = data.message;
+      } else {
+        messageDiv.textContent = data.message;
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      messageDiv.textContent = 'An error occurred while adding the thought.';
+    }
+  } else {
+    messageDiv.textContent = 'Please enter a comment.';
+  }
+});

@@ -207,6 +207,43 @@ app.post('/signup', (req, res) => {
     }
   });
 
+//adds journal comment to journal.json
+  app.post('/addThought', (req, res) => {
+    try {
+      const journalData = JSON.parse(fs.readFileSync('jsons/journal.json', 'utf-8') || '{"thoughts": []}');
+      
+      const { comment } = req.body;
+  
+      if (comment) {
+        const thought = {
+          comment: comment,
+        };
+  
+        journalData.thoughts.push(thought);
+  
+        fs.writeFileSync('jsons/journal.json', JSON.stringify(journalData, null, 2), 'utf-8');
+  
+        res.status(200).json({ message: 'Thought added successfully!' });
+      } else {
+        res.status(400).json({ message: 'Please enter a comment.' });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
+  
+  // Endpoint to get all journal entries
+app.get('/getJournalEntries', (req, res) => {
+    try {
+      const journalData = JSON.parse(fs.readFileSync('jsons/journal.json', 'utf-8') || '{"thoughts": []}');
+      res.status(200).json({ entries: journalData.thoughts });
+    } catch (error) {
+      console.error('Error:', error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
+
 
 app.listen(PORT,()=>{
     console.log("http://localhost:"+PORT);
