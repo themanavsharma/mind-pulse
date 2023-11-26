@@ -1,74 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+
 body {
-  background: 	#FFC0CB;
-  background: -webkit-radial-gradient(center, #FFC0CB, #8FBC8F);
-  background: -moz-radial-gradient(center, #FFC0CB, #6B8E23);
-  background: radial-gradient(ellipse at center, rgb(187, 188, 143), #FFC0CB);
+   background: url('turt.webp') no-repeat center center fixed, url('fallback.jpg') no-repeat center center fixed;
+   background-size: cover;
+  /* Fallback color if the image fails to load */
 }
+
 
 .app {
-  width: 1280px;
-  margin: auto;
+ width: 1280px;
+ margin: auto;
 }
-
 .quotes-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ height: 100vh;
+}
+.inner-quotes-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ width: 900px;
+ text-align: center;
+ min-height: 400px;
+ padding: 0 25px;
+ color: gray;
+ border-radius: 10px;
+ background-color: #c3d0d4; /* Light Blue */
+ border: 10px solid #536e7e; /* Royal Blue */
+ box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.9);
 }
 
-.inner-quotes-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 900px;
-  text-align: center;
-  min-height: 400px;
-  padding: 0 25px;
-  color: gray;
-  border-radius: 10px;
-  background-color: #F4EDEA;
-  border: 10px solid #ff7ea7;
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.9);
-}
 
 .inner-quotes-container p {
-  font-size: 1.5rem;
-  color: black;
+ font-size: 1.5rem;
+ color: black;
 }
+
 
 .inner-quotes-container h3 {
-  font-size: 2rem;
-  color: black;
-  font-family: 'Dancing Script', cursive;
+ font-size: 2rem;
+ color: black;
+ font-family: 'Dancing Script', cursive;
 }
+
 
 .quote-btn {
-  padding-top: 25px;
+ padding-top: 25px;
 }
+
 
 @media(max-width:1280px) {
-  .container {
-    width: 95%;
-  }
+ .app {
+   width: 95%;
+ }
 }
+
 
 @media(max-width:900px) {
-  .inner-quotes-container {
-    width: 100%;
-  }
+ .inner-quotes-container {
+   width: 100%;
+ }
 }
 
-@media(max-width:480px) {
-  .inner-quotes-container p {
-    font-size: 1.2rem;
-  }
 
-  .inner-quotes-container h3 {
-    font-size: 1.5rem;
-  }
+@media(max-width:480px) {
+ .inner-quotes-container p {
+   font-size: 1.2rem;
+ }
+
+
+ .inner-quotes-container h3 {
+   font-size: 1.5rem;
+ }
 }
