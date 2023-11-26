@@ -146,7 +146,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(6):before {
-    content: "  Create \aself-care list";
+    content: "Create \aself-care list";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
