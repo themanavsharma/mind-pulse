@@ -10,9 +10,10 @@ const Comment = document.getElementById("Comment");
 const CommentStatus = document.getElementById("CommentStatus");
 
 
+
 var questions=[];
 var Qno = 0;
-var marks = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
+var marks = [-1,-1,-1,-1,-1];
 var QuestionData=[];
 
 function init(){
@@ -52,43 +53,87 @@ function previous(){
         showQuestion();
     }
 }
-function next(){
-    var ele = (document.getElementsByName(QuestionData[Qno]));
+// function next(){
+//     var ele = (document.getElementsByName(QuestionData[Qno]));
+//     var selected = false;
+//     var Qmark=0;
+//     for(i=0;i<ele.length;i++){
+//         if(ele[i].checked){
+//             selected=true;
+//             Qmark=ele[i].value;
+//         }
+//     }
+//     if(!selected){
+//         status.innerHTML="please select answer from the following option with best of your knowledge";
+//     }
+//     if(Qno<questions.length-1 && selected){
+//         marks[Qno]=parseInt(Qmark);
+//         Qno++;
+//         status.innerHTML="";
+//         showQuestion();
+//     }
+//     else if(Qno==questions.length-1){
+//         marks[Qno]=parseInt(Qmark);
+//         var totalMarks=0;
+//         for(i=0;i<marks.length;i++){
+//             totalMarks+=marks[i];
+//         }
+//         prevBut.style.display = "none";
+//         nextBut.style.display = "none";
+//         var url = '/getResult?result=' + totalMarks;
+//         fetch(url).then(res => res.json()).
+//             then(data => {
+//                 QSection.style.textAlign = "center";
+//                 QSection.style.color = data.color;
+//                 QSection.style.fontSize = "20px";
+//                 var showData = "Mental Health Percentage : " + (100 - ((totalMarks / 24 * 100).toFixed(2)));
+//                 showData += "<br/><br/><br/>"
+//                 showData+="Click <a href='/"+data.color+"' target='_blank'>link</a> to see";
+//                 QSection.innerHTML = showData;
+//             });
+//     }
+// }
+
+function next() {
+    var ele = document.getElementsByName(QuestionData[Qno]);
     var selected = false;
-    var Qmark=0;
-    for(i=0;i<ele.length;i++){
-        if(ele[i].checked){
-            selected=true;
-            Qmark=ele[i].value;
+    var Qmark = 0;
+    for (i = 0; i < ele.length; i++) {
+        if (ele[i].checked) {
+            selected = true;
+            Qmark = ele[i].value;
         }
     }
-    if(!selected){
-        status.innerHTML="please select answer from the following option with best of your knowledge";
+    if (!selected) {
+        status.innerHTML = "please select an answer from the following options with the best of your knowledge";
     }
-    if(Qno<questions.length-1 && selected){
-        marks[Qno]=parseInt(Qmark);
+    if (Qno < questions.length - 1 && selected) {
+        marks[Qno] = parseInt(Qmark);
         Qno++;
-        status.innerHTML="";
+        status.innerHTML = "";
         showQuestion();
-    }
-    else if(Qno==questions.length-1){
-        marks[Qno]=parseInt(Qmark);
-        var totalMarks=0;
-        for(i=0;i<marks.length;i++){
-            totalMarks+=marks[i];
+    } else if (Qno == questions.length - 1) {
+        marks[Qno] = parseInt(Qmark);
+        var totalMarks = 0;
+        for (i = 0; i < marks.length; i++) {
+            totalMarks += marks[i];
         }
         prevBut.style.display = "none";
         nextBut.style.display = "none";
         var url = '/getResult?result=' + totalMarks;
-        fetch(url).then(res => res.json()).
-            then(data => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
                 QSection.style.textAlign = "center";
                 QSection.style.color = data.color;
                 QSection.style.fontSize = "20px";
-                var showData = "Mental Health Percentage : " + (100 - ((totalMarks / 24 * 100).toFixed(2)));
-                showData += "<br/><br/><br/>"
-                showData+="Click <a href='/"+data.color+"' target='_blank'>link</a> to see";
+                var showData = "Mental Health Percentage: " + (100 - ((totalMarks / 24 * 100).toFixed(2)));
+                showData += "<br/><br/><br/>";
+                showData += "Click <a href='/"+data.color+"' target='_blank'>link</a> to see";
                 QSection.innerHTML = showData;
+
+                // Call the submitQuestionnaire function here
+                submitQuestionnaire();
             });
     }
 }
@@ -149,3 +194,30 @@ function showAllCount(){
         },200);
     }
 }
+
+// Assuming marks array is already populated
+
+function submitQuestionnaire() {
+    // Create an array of response objects
+    const responses = marks.map((mark, index) => ({ [`Q${index + 1}`]: mark }));
+  
+    // Create the data object to be sent to the server
+    const data = { responses };
+  
+    // Send the data to the server
+    fetch('/submitQuestionnaire', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(result => {
+      console.log('Questionnaire submitted successfully:', result);
+    })
+    .catch(error => {
+      console.error('Error submitting questionnaire:', error);
+    });
+  }
+  

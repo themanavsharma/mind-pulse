@@ -3,31 +3,31 @@
         {
             "Q":"Emotional State",
             "options":["Calm and content","Neutral","Stressed or anxious"],
-            "values":["1","3","2"],
+            "values":["1","2","3"],
             "name":"age"
         },
         {
             "Q":"Work-life Balance",
             "options":["Well-balanced","Satisfactory","Overwhelmed"],
-            "values":["1","3","2"],
+            "values":["1","2","3"],
             "name":"family"
         },
         {
             "Q":"Physical Well-being",
             "options":["Energized and healthy","Average","Fatigued or unwell"],
-            "values":["1","3","2"],
+            "values":["1","2","3"],
             "name":"taking_help"
         },
         {
             "Q":"Connection To Others",
             "options":["Strong and supportive","Adequate","Feeling isolated"],
-            "values":["1","3","2"],
+            "values":["1","2","3"],
             "name":"online_help"
         },
         {
             "Q":"Mindfullness Practices",
             "options":["Regularly engage in mindfulness activities","Occasionally practice mindfulness","Rarely practice mindfulness"],
-            "values":["1","3","2"],
+            "values":["1","2","3"],
             "name":"experienced_attack"
         }
        

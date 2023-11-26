@@ -5,6 +5,8 @@ const path = require('path');
 const fs = require("fs");
 var PDF="WHITE.PDF";
 
+const bodyParser = require('body-parser');
+
 var nodemailer = require('nodemailer');
 const { dirname } = require('path');
 
@@ -244,6 +246,39 @@ app.get('/getJournalEntries', (req, res) => {
     }
   });
 
+
+
+
+  app.use(bodyParser.json());
+
+  app.post('/submitQuestionnaire', (req, res) => {
+    const responseData = req.body.responses;
+  
+    // Assuming questionnaire.json exists with an initial structure
+    let questionnaireData = {
+      responses: [
+        { "Q1": 0 },
+        { "Q2": 0 },
+        { "Q3": 0 },
+        { "Q4": 0 },
+        { "Q5": 0 }
+      ]
+    };
+  
+    // Update the questionnaire data based on the submitted responses
+    responseData.forEach(response => {
+      const questionKey = Object.keys(response)[0];
+      const questionIndex = parseInt(questionKey.slice(1)) - 1;
+      
+      questionnaireData.responses[questionIndex][questionKey] = response[questionKey];
+    });
+  
+    // Save the updated data back to the questionnaire.json file
+    fs.writeFileSync('questionnaire.json', JSON.stringify(questionnaireData, null, 2), 'utf-8');
+  
+    res.json({ success: true, message: 'Questionnaire submitted successfully' });
+  });
+  
 
 app.listen(PORT,()=>{
     console.log("http://localhost:"+PORT);
