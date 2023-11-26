@@ -20,13 +20,13 @@
 
     <!-- Flickity HTML init -->
     <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-        <div class="gallery-cell" onclick="window.location.href='questionnaire/form.html';"></div>
-        <div class="gallery-cell" onclick="window.location.href='breatheMeditation/breathe.html';"></div>
-        <div class="gallery-cell" onclick="window.location.href='moodTracker/moodtracker.html';"></div>
-        <div class="gallery-cell" onclick="window.location.href='QuoteGenerator/quote.html';"></div>
-        <div class="gallery-cell" onclick="window.location.href='journal/journal.html';"></div>
-        <div class="gallery-cell" onclick="window.location.href='toDo/todo.html';"></div>
-        <div class="gallery-cell" onclick="window.location.href='MusicLibrary/music.html';"></div>
+        <div class="gallery-cell" tabindex="0" onclick="window.location.href='questionnaire/form.html';"></div>
+        <div class="gallery-cell"  tabindex="0" onclick="window.location.href='breatheMeditation/breathe.html';"></div>
+        <div class="gallery-cell" tabindex="0" onclick="window.location.href='moodTracker/moodtracker.html';"></div>
+        <div class="gallery-cell" tabindex="0" onclick="window.location.href='QuoteGenerator/quote.html';"></div>
+        <div class="gallery-cell"  tabindex="0" onclick="window.location.href='journal/journal.html';"></div>
+        <div class="gallery-cell" tabindex="0" onclick="window.location.href='toDo/todo.html';"></div>
+        <div class="gallery-cell" tabindex="0" onclick="window.location.href='MusicLibrary/music.html';"></div>
     </div>
 
     <div class="admin-login">
@@ -36,5 +36,22 @@
 
     <script src="flickity.pkgd.min.js"></script>
     <script src="mainScript.js"></script>
+
+    <script>
+        // Add event listener to handle keyboard events
+        document.addEventListener('keydown', function (event) {
+            // Check if the pressed key is the Enter key (keyCode 13) or Space key (keyCode 32)
+            if (event.keyCode === 13 || event.keyCode === 32) {
+                // Get the focused element
+                const focusedElement = document.activeElement;
+
+                // Check if the focused element is a gallery cell
+                if (focusedElement.classList.contains('gallery-cell')) {
+                    // Simulate a click on the focused gallery cell
+                    focusedElement.click();
+                }
+            }
+        });
+    </script>
 </body>
 </html>
