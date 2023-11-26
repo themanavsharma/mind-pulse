@@ -251,33 +251,38 @@ app.get('/getJournalEntries', (req, res) => {
 
   app.use(bodyParser.json());
 
-  app.post('/submitQuestionnaire', (req, res) => {
+//   const fs = require('fs');
+app.post('/submitQuestionnaire', (req, res) => {
     const responseData = req.body.responses;
   
-    // Assuming questionnaire.json exists with an initial structure
-    let questionnaireData = {
-      responses: [
-        { "Q1": 0 },
-        { "Q2": 0 },
-        { "Q3": 0 },
-        { "Q4": 0 },
-        { "Q5": 0 }
-      ]
-    };
+    // Load existing questionnaire data or initialize if not present
+    let questionnaireData;
+    try {
+      questionnaireData = JSON.parse(fs.readFileSync('jsons/questionnaire.json', 'utf-8'));
+    } catch (error) {
+      questionnaireData = {
+        responses: []
+      };
+    }
   
-    // Update the questionnaire data based on the submitted responses
+    // Create a new response object
+    const newResponse = {};
+    
+    // Update the new response object based on the submitted responses
     responseData.forEach(response => {
       const questionKey = Object.keys(response)[0];
-      const questionIndex = parseInt(questionKey.slice(1)) - 1;
-      
-      questionnaireData.responses[questionIndex][questionKey] = response[questionKey];
+      newResponse[questionKey] = response[questionKey];
     });
   
+    // Add the new response to the array
+    questionnaireData.responses.push(newResponse);
+  
     // Save the updated data back to the questionnaire.json file
-    fs.writeFileSync('questionnaire.json', JSON.stringify(questionnaireData, null, 2), 'utf-8');
+    fs.writeFileSync('jsons/questionnaire.json', JSON.stringify(questionnaireData, null, 2), 'utf-8');
   
     res.json({ success: true, message: 'Questionnaire submitted successfully' });
   });
+  
   
 
 app.listen(PORT,()=>{
