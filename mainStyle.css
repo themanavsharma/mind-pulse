@@ -3,7 +3,7 @@
 h1 {
     margin: 50px;
     font-family: Nunito Sans;
-    color: #333; /* Set the text color */
+    color: #505050; /* Set the text color */
     text-align: center; /* Center the text horizontally */
     font-size: 50px;
 }
@@ -34,7 +34,7 @@ h1 {
     overflow: hidden; /* Hide any body overflow to prevent unwanted rectangles */
     margin: 0; /* Remove default margin */
     height: 100vh; /* Set full viewport height */
-    background: radial-gradient(circle, #ffffff, #e1e1e1);
+    background: radial-gradient(circle, #6caad3, #e1e1e1);
     background-size: 200% 200%; /* Set initial background size for animation */
     animation: gradientAnimation 10s infinite linear; /* Adjust the duration as needed */
 }
