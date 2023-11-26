@@ -203,13 +203,21 @@ h1 {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    color: white;
     text-align: right;
 }
 
 .admin-login a {
-    color: #333; 
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333; /* Set the background color for the button */
+    color: white;
     text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.admin-login a:hover {
+    background-color: #555; /* Change the background color on hover */
 }
 
 .gallery-cell:nth-child(6) {
