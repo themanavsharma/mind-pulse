@@ -85,7 +85,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(1):before {
-    content: "begin \amindful reflection";
+    content: "Begin \amindful reflection";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -97,7 +97,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(3):before {
-    content: "track \ayour mood";
+    content: "Track \ayour mood";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -109,7 +109,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(4):before {
-    content: "view \aserenity quotes";
+    content: "View \aserenity quotes";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -121,7 +121,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(2):before {
-    content: "begin \aguided breathing";
+    content: "Begin \aguided breathing";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -133,7 +133,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(5):before {
-    content: "share \ayour thoughts";
+    content: "Share \ayour thoughts";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
