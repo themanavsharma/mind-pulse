@@ -3,7 +3,7 @@
 h1 {
     margin: 50px;
     font-family: Nunito Sans;
-    color: #505050; /* Set the text color */
+    color: #363636; /* Set the text color */
     text-align: center; /* Center the text horizontally */
     font-size: 50px;
 }
@@ -34,7 +34,7 @@ h1 {
     overflow: hidden; /* Hide any body overflow to prevent unwanted rectangles */
     margin: 0; /* Remove default margin */
     height: 100vh; /* Set full viewport height */
-    background: radial-gradient(circle, #6caad3, #e1e1e1);
+    background: radial-gradient(circle, #f1f1f1, #e1e1e1);
     background-size: 200% 200%; /* Set initial background size for animation */
     animation: gradientAnimation 10s infinite linear; /* Adjust the duration as needed */
 }
@@ -85,7 +85,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(1):before {
-    content: "Begin \amindful reflection";
+    content: "begin \amindful reflection";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -97,7 +97,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(3):before {
-    content: "Track \ayour mood";
+    content: "track \ayour mood";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -109,7 +109,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(4):before {
-    content: "View \aserenity quotes";
+    content: "view \aserenity quotes";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -121,7 +121,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(2):before {
-    content: "Begin \aguided breathing";
+    content: "begin \aguided breathing";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -133,7 +133,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(5):before {
-    content: "Share \ayour thoughts";
+    content: "share \ayour thoughts";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -146,7 +146,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(6):before {
-    content: "Create \aself-care list";
+    content: "create \aself-care list";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
@@ -160,7 +160,7 @@ h1 {
 
 /* cell content */
 .gallery-cell:nth-child(7):before {
-    content: "Listen \ato calming music";
+    content: "listen \ato calming music";
     color: #9C9C9C;
     font-family: Nunito Sans;
     font-size: 42px;
